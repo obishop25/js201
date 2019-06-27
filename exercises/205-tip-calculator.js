@@ -9,7 +9,18 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
+function tipAmount(amount,rating){
+    if (rating === 'good'){
+        return amount * .2
 
+    }   else if (rating === "fair"){
+        return amount * .15
+
+    }   else {
+        return amount * .1
+    }
+
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,6 +32,10 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount (amount,rating){
+    let tip = tipAmount(amount,rating)
+    return amount + tip
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,3 +46,8 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount(amount,rating,people){
+    let bill = totalAmount(amount,rating);
+    return  bill/people;
+}

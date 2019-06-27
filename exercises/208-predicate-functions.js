@@ -1,3 +1,5 @@
+//import { truncate } from "fs";
+
 // TIP:
 // A predicate function is a function that returns boolean true or false
 // They are useful for improving the semantics of checking for conditions.
@@ -21,6 +23,12 @@
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
 
+function isVowel(letter){
+    if (letter === 'a' || letter =='e'|| letter ==='i' || letter =='o'|| letter ==='u'){
+        return true
+    }   else { return false}
+    
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,7 +44,20 @@
 // isOdd(5) --> true
 // isOdd('7') --> false
 // isOdd(3.14) --> false
-
+function isEven(number){
+    if (number % 2 === 0 && Number.isInteger(number) === true){
+        return true
+    }   else {
+        return false
+    }
+}
+function isOdd(number){
+    if (number % 2 > 0 && Number.isInteger(number) === true){
+        return true
+    }   else {
+        return false
+    }
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
