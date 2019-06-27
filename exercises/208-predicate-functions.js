@@ -73,3 +73,9 @@ function isOdd(number){
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+// let statescap = {
+//     'Alabama:Montgomery, 
+//     Alaska:Juneau,
+//     Arkansas:Little Rock, 
+// };
