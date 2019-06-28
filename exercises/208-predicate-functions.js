@@ -24,12 +24,11 @@
 // isVowel({e: 'Elephant'}) --> false
 
 function isVowel(letter){
-    if (letter === 'a' || letter =='e'|| letter ==='i' || letter =='o'|| letter ==='u'){
-        return true
-    }   else { return false}
-    
+    if (letter === 'a' || letter =='e'|| letter ==='i' || letter =='o'|| letter ==='u' ||
+        letter === 'A' || letter =='E'|| letter ==='I' || letter =='O'|| letter ==='U'){
+        return true  
+    }   else { return false} 
 }
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write two functions: "isEven" and "isOdd" that take a number argument and
@@ -52,13 +51,12 @@ function isEven(number){
     }
 }
 function isOdd(number){
-    if (number % 2 > 0 && Number.isInteger(number) === true){
+    if (number % 2 != 0 && Number.isInteger(number) === true){
         return true
     }   else {
         return false
     }
 }
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
@@ -75,8 +73,63 @@ function isOdd(number){
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
 
+function isCapitalCity (state,city){
+    let cityCap ={
+        Alabama:'Montgomery',
+        Alaska: 'Juneau',
+        Arizona: 'Phoenix',
+        Arkansas: 'Little Rock',
+        California: 'Sacremento',
+        Colorado: 'Denver',
+        Connecticut: 'Hartford',
+        Delaware: 'Dover',
+        Florida: 'Tallahassee',
+        Georgia: 'Atlanta',
+        Hawaii: 'Honolulu',
+        Idaho: 'Boise',
+        Illinois: 'Springfield',
+        Indiana: 'Indianapolis',
+        Iowa: 'Des Moines',
+        Kansas: 'Topeka',
+        Kentucky: 'Frankfort',
+        Louisiana: 'Baton Rogue',
+        Maine: 'Augusta',
+        Maryland: 'Annapolis',
+        Massachusetts:'Boston',
+        Michigan: 'Lansing',
+        Mississippi: 'Jackson',
+        Missouri: 'Jefferson City',
+        Montana: 'Helena',
+        Nebraska: 'Lincoln',
+        Nevada: 'Carson City',
+        Hampshire : 'Concord', //come back and add prefix New
+        Jersey: 'Trenton',  //come back and add the prefix New
+        Mexico: 'Santa Fe', //come back and add the prefix New
+        York: 'Albany', //come back and add the prefix New
+        Carolina: 'Raleigh', //come back and add the prefix New
+        Ohio: 'Columbus',
+        Oklahoma: 'Oklahoma City',
+        Oregon: 'Salem',
+        Pennsylvania: 'Harrisburg',
+        Island: 'Providence', // come back and add prefix Rhode
+        Carolina: 'Columbia', //come bacvk and add prefix South
+        Dakota: 'Bismark', //come back and add prefix South
+        Tennessee: 'Nashville', 
+        Texas: 'Austin',
+        Utah: 'Salt Lake City',
+        Vermont: 'Montpelier',
+        Virginia: 'Richmond',
+        Washington: 'Olympia',
+        WestV: 'Charleston', //come back and add suffix virginia
+        Wisconsin: 'Madison',
+        Wyoming: 'Cheyenne'
+    }
+    if (cityCap[state] = city) {
+        return true
+    }   else {return false}
+}
 // let statescap = {
-//     'Alabama:Montgomery, 
-//     Alaska:Juneau,
-//     Arkansas:Little Rock, 
+//     'Alabama:Montgomery', 
+//     'Alaska:Juneau',
+//     'Arkansas:Little Rock', 
 // };
