@@ -102,29 +102,29 @@ function isCapitalCity (state,city){
         Montana: 'Helena',
         Nebraska: 'Lincoln',
         Nevada: 'Carson City',
-        Hampshire : 'Concord', //come back and add prefix New
-        Jersey: 'Trenton',  //come back and add the prefix New
-        Mexico: 'Santa Fe', //come back and add the prefix New
-        York: 'Albany', //come back and add the prefix New
-        Carolina: 'Raleigh', //come back and add the prefix New
+        'New Hampshire' : 'Concord', //come back and add prefix New
+        'New Jersey': 'Trenton',  //come back and add the prefix New
+        'New Mexico': 'Santa Fe', //come back and add the prefix New
+        'New York': 'Albany', //come back and add the prefix New
+        'North Carolina': 'Raleigh', //come back and add the prefix New
         Ohio: 'Columbus',
         Oklahoma: 'Oklahoma City',
         Oregon: 'Salem',
         Pennsylvania: 'Harrisburg',
-        Island: 'Providence', // come back and add prefix Rhode
-        Carolina: 'Columbia', //come bacvk and add prefix South
-        Dakota: 'Bismark', //come back and add prefix South
+        'Rhode Island': 'Providence', // come back and add prefix Rhode
+        'North Carolina': 'Columbia', //come bacvk and add prefix South
+        'North Dakota': 'Bismark', //come back and add prefix South
         Tennessee: 'Nashville', 
         Texas: 'Austin',
         Utah: 'Salt Lake City',
         Vermont: 'Montpelier',
         Virginia: 'Richmond',
         Washington: 'Olympia',
-        WestV: 'Charleston', //come back and add suffix virginia
+        'West Virginia': 'Charleston', //come back and add suffix virginia
         Wisconsin: 'Madison',
         Wyoming: 'Cheyenne'
     }
-    if (cityCap[state] = city) {
+    if (cityCap[state] === city) {
         return true
     }   else {return false}
 }

@@ -9,3 +9,22 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+// first we need total numbers starting from one
+function fizzbuzz (number) {
+    text = ""
+        for (i=1; i < number + 1; i++){
+            if (i % 3 != 0 && i%5 != 0){
+                text += '.'
+            }
+            else if (i % 3 === 0 && i % 5 !=0 ){
+                text += 'fizz'
+            }
+            else if (i % 3 != 0 && i % 5 === 0) {
+                text += 'buzz'
+            }
+            else { text +='fizzbuzz'}
+    
+          text += ''
+        }
+        return text 
+    } 
