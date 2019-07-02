@@ -7,9 +7,13 @@
 //
 // Example:
 // reverse("skoob") --> "books"
-
-
-
+function reverse (str){
+    let reverseditem = "";
+    for (let char of str){
+        reverseditem = char + reverseditem;
+    }
+    return reverseditem;
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "findLongestWord" that takes a string of words and returns
 // the longest word in that string. If there are multiple words with the same
@@ -17,9 +21,20 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-
-
-
+function findLongestWord (word){
+    let arr = word.split(" ");
+    length = 0
+    index = 0
+    for (let item of arr){
+        if (item.length > length){
+            length = item.length 
+            longindex = index
+        }
+        else {length = length}
+        index = index + 1
+    }
+    return (arr[longindex])
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "nicer"
 // It should clean up the language in its input sentence.
@@ -28,7 +43,16 @@
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
-
+function nicer (sentence){
+    arrsentence = sentence.split(" ")
+    for (i=0; i<arrsentence.length; i++){
+        if (arrsentence[i] === "dang" || arrsentence[i]==="crappy"||arrsentence[i]=== "darn" || arrsentence[i]=== "heck"){
+            arrsentence.splice(i,1)
+        }  
+    }
+    let newsentence = arrsentence.join(" ")
+    return newsentence
+    }
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +63,19 @@
 // Examples:
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
-
+function capitalizeAll(sentence){
+    //let location = sentence.indexOf(" ")
+    let correctsentence = sentence[0].toUpperCase()
+    for (i=1; i<sentence.length; i++){
+        correctsentence += sentence[i]
+        if (sentence[i]=== " "){
+        i++;
+        let capitalize = sentence[i].toUpperCase();
+        correctsentence += capitalize
+        } 
+    }
+    return correctsentence
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
